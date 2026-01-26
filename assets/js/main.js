@@ -95,7 +95,7 @@ class App {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 80;
+          const offsetTop = targetSection.offsetTop - 90;
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
