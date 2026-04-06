@@ -27,12 +27,21 @@ class App {
   setupMenuToggle() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     if (navToggle && navMenu) {
       navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
         document.body.classList.toggle('menu-open');
+        menuOverlay?.classList.toggle('active');
+      });
+
+      menuOverlay?.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        menuOverlay.classList.remove('active');
       });
 
       document.addEventListener('click', (e) => {
@@ -40,6 +49,7 @@ class App {
           navToggle.classList.remove('active');
           navMenu.classList.remove('active');
           document.body.classList.remove('menu-open');
+          menuOverlay?.classList.remove('active');
         }
       });
     }
@@ -95,12 +105,21 @@ class App {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 90;
+          const offsetTop = targetSection.offsetTop - 70;
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
           });
         }
+        
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        
+        navToggle?.classList.remove('active');
+        navMenu?.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        menuOverlay?.classList.remove('active');
       });
     });
   }
