@@ -71,7 +71,7 @@ class App {
 
       sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 80;
         const sectionId = section.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -95,7 +95,7 @@ class App {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 140;
+          const offsetTop = targetSection.offsetTop - 80;
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
