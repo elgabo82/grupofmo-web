@@ -251,7 +251,7 @@ Este proyecto pertenece a Grupo FMO. Todos los derechos reservados.
 ## 📞 Contacto
 
 - **Email**: info@grupofmo.com
-- **Teléfono**: +593 123 456 789
+- **Teléfono**: +593 996 832 007 | +593 995 974 9639
 - **Ubicación**: Portoviejo, Ecuador
 - **Web**: https://www.grupofmo.com
 
